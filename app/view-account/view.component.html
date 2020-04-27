@@ -1,43 +1,46 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="view.component.css">
+
 <div id="wrapper">
-
   <!-- Sidebar -->
-  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+  <ul style="background-color: rgba(0,106,162,0.96)" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-      <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/home.component.html" style="margin-bottom: 20px">
+      <div>
+        <img style="width: 40px" src="../Include/logo-test.png">
       </div>
       <div class="sidebar-brand-text mx-3">Accounting Solutions</div>
     </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+
 
     <!-- Nav Item - Home -->
-    <li class="nav-item active">
-      <a class="nav-link" href="/home">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+    <li class="nav-item">
+      <a class="nav-link" href="../home/home.component.html">
+
         <span>Home</span></a>
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider my-0" />
 
     <!-- Nav Item - Accounts -->
-    <li class="nav-item">
-      <a class="nav-link" href="/accounts">
-        <i class="fas fa-fw fa-table"></i>
+    <li class="nav-item active">
+      <a class="nav-link" href="../accounts/accounts.component.html">
+
         <span>Accounts</span></a>
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider my-0" />
 
     <!-- Nav Item - Users -->
     <li class="nav-item">
-      <a class="nav-link" href="/users">
-        <i class="fas fa-fw fa-table"></i>
+      <a class="nav-link" href="../users/users.component.html">
+
         <span>Users</span></a>
     </li>
 
@@ -48,21 +51,14 @@
   </ul>
   <!--****************************** End of Sidebar **************************************-->
 
-
   <!-- Content Wrapper-->
   <div id="content-wrapper" class="d-flex flex-column">
-
-
     <!-- Main Content -->
     <div id="content">
-
-
       <!--****************************** Topbar ********************************************-->
       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
-
           <div class="topbar-divider d-none d-sm-block"></div>
 
           <!-- Nav Item - User Information -->
@@ -70,174 +66,103 @@
             <div class="nav-link" href="/home">
               <span class="mr-2 d-lg-inline text-gray-600 medium">Fred Rogers</span>
               <img class=" rounded-circle" width="50" height="50"
-                src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY4MzI5NjA5OTc5NDM5MDYy/fred-rogers-1928---2003-of-the-television-series-mister-rogers-neighborhood-circa-1980s-photo-by-fotos-internationalcourtesy-of-getty-images.jpg">
-
+                src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY4MzI5NjA5OTc5NDM5MDYy/fred-rogers-1928---2003-of-the-television-series-mister-rogers-neighborhood-circa-1980s-photo-by-fotos-internationalcourtesy-of-getty-images.jpg" />
             </div>
-
           </li>
           <li class="nav-item">
-            <div class="nav-link" href="/home">
-
-              <button class="btn btn-md btn-outline-dark btn-block" type="button" (click)="logout()">Logout</button>
+            <div class="nav-link" href="/">
+              <a href="../login/login.component.html">
+                <button class="btn btn-md btn-outline-dark btn-block" type="button">Logout</button>
+              </a>
             </div>
-
           </li>
-
         </ul>
-
-
       </nav>
       <!--****************************** End of Topbar ************************************************************-->
 
-
-
-
-
-
+      <!-- Begin Page Content -->
       <div class="container-fluid">
 
-        <div>
-         <h4 style="text-align: left;">View Account</h4>
-         <button (click)="navAccounts()" class="btn btn-sm btn-outline-info btn-block" style="width: 60px;" type="button">Back</button>
+        <a href="../accounts/accounts.component.html">
+          <button style="margin-bottom: 15px;" class="btn btn-sm btn-info">
+            Go Back To Accounts
+          </button>
+          </a>
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Account: Rolling Hill</h1>
+        <h4 class="mb-4">Ledger</h4>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-body">
+            <div class="table-responsive">
+              <div style="margin-bottom: 15px;">
+                
+                <div class="form-group form-inline" style="float: right; margin-right: 5%;">
+                  Search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+                </div>
+              </div>
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                    <th>Balance</th>
+                    <th>View Journal</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>8/3/2015</td>
+                    <td></td>
+                    <td></td>
+                    <td>$500,000</td>
+                    <td>$500,000</td>
+                    <td>
+                      <button class="btn btn-sm btn-primary" (click)="navEditAccount()">
+                        view journal entry
+                      </button>
+                    </td>          
+                  </tr>
+
+                  <tr>
+                    <td>9/15/2015</td>
+                    <td></td>
+                    <td></td>
+                    <td>$200,000</td>
+                    <td>$700,000</td>
+                    <td>
+                      <button class="btn btn-sm btn-primary" (click)="navEditAccount()">
+                        view journal entry
+                      </button>
+                    </td>          
+                  </tr>
+
+                  <tr>
+                    <td>2/9/2016</td>
+                    <td></td>
+                    <td>$387,400</td>
+                    <td></td>
+                    <td>$312,600</td>
+                    <td>
+                      <button class="btn btn-sm btn-primary" (click)="navEditAccount()">
+                        view journal entry
+                      </button>
+                    </td>          
+                  </tr>
+
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        <div style="margin-bottom: 20px;"></div>
-
-        <div class="register-container">
-          <form [formGroup]="viewAccountForm" class="form-register">
-            <img class="mb-4" src="../../Include/logo.png" alt="" width="72" height="72">
-
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="firstName">Account Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="lastName">Account Number</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-
-            <div class="">
-              <label for="firstName">Account Description</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div style="margin-bottom: 12px;"></div>
-
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label for="firstName">Normal Side</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">Account Category</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">Account Subcategory</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label for="firstName">Initial Balance</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">Debit</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">Credit</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label for="firstName">Date Added</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">User ID</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="lastName">Order</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="firstName">Statement</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="lastName">Comment</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <div style="margin-bottom: 15px;"></div>
-
-          </form>
-
-          <div style="margin-bottom: 15px;"></div>
-        </div>
-
       </div>
-
+      <!-- /.container-fluid -->
     </div>
     <!-- End of Main Content -->
-
   </div>
   <!-- End of Content Wrapper -->
 

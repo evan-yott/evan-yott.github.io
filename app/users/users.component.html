@@ -1,14 +1,20 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="users.component.css">
 
 <div id="wrapper">
   <!-- Sidebar -->
-  <ul style="background-color: rgba(0,106,162,0.96)" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+  <ul style="background-color: rgba(0,106,162,0.96)" class="navbar-nav sidebar sidebar-dark accordion"
+    id="accordionSidebar">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/home.component.html" style="margin-bottom: 20px">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/home.component.html"
+      style="margin-bottom: 20px">
       <div>
         <img style="width: 40px" src="../Include/logo-test.png">
       </div>
@@ -91,11 +97,13 @@
           <div class="card-body">
             <div class="table-responsive">
               <div style="margin-bottom: 15px;">
-                <button class="btn btn-lg btn-info">
-                  Add User
-                </button>
+                <a href="../add-user/add-user.component.html">
+                  <button class="btn btn-lg btn-info">
+                    Add User
+                  </button>
+                </a>
                 <div class="form-group form-inline" style="float: right; margin-right: 5%;">
-                  Search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+                  Search: <input class="form-control ml-2" type="text" [formControl]="filter" />
                 </div>
               </div>
 
@@ -116,19 +124,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let user of users; index as i">
-
-                    <td>{{ user.id }}</td>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.role }}</td>
-                    <td>{{ user.status }}</td>
+                  <tr>
+                    <td>0010</td>
+                    <td>fredRogers</td>
+                    <td>Admin</td>
+                    <td style="color: rgb(0, 172, 0);"><strong>Active</strong></td>
                     <td>
                       <button class="btn btn-sm btn-primary">
                         edit
                       </button>
                     </td>
                     <td>
-                      <button class="btn btn-sm btn-success">
+                      <button disabled class=" btn btn-sm btn-success">
                         activate
                       </button>
                     </td>
@@ -136,7 +143,96 @@
                       <button class="btn btn-sm btn-danger">deactivate</button>
                     </td>
                     <td>
-                      <button class="btn btn-sm btn-light">email</button>
+                      <button class="btn btn-sm btn-dark">email</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>0020</td>
+                    <td>cliveLewis</td>
+                    <td>Manager</td>
+                    <td style="color: rgb(0, 172, 0);"><strong>Active</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary">
+                        edit
+                      </button>
+                    </td>
+                    <td>
+                      <button disabled class=" btn btn-sm btn-success">
+                        activate
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">deactivate</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-dark">email</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>0030</td>
+                    <td>curiousGeorge</td>
+                    <td>Accountant</td>
+                    <td style="color: rgb(177, 27, 0);"><strong>Inactive</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary">
+                        edit
+                      </button>
+                    </td>
+                    <td>
+                      <button class=" btn btn-sm btn-success">
+                        activate
+                      </button>
+                    </td>
+                    <td>
+                      <button disabled class="btn btn-sm btn-danger">deactivate</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-dark">email</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>0040</td>
+                    <td>charlesSpurgeon</td>
+                    <td>Accountant</td>
+                    <td style="color: rgb(0, 172, 0);"><strong>Active</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary">
+                        edit
+                      </button>
+                    </td>
+                    <td>
+                      <button disabled class=" btn btn-sm btn-success">
+                        activate
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">deactivate</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-dark">email</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>0050</td>
+                    <td>benFranklin</td>
+                    <td>Accountant</td>
+                    <td style="color: rgb(0, 172, 0);"><strong>Active</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary">
+                        edit
+                      </button>
+                    </td>
+                    <td>
+                      <button disabled class=" btn btn-sm btn-success">
+                        activate
+                      </button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-danger">deactivate</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-dark">email</button>
                     </td>
                   </tr>
                 </tbody>
